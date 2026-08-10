@@ -1,0 +1,765 @@
+/* Estilos Globais */
+body {
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #2b1df7, #4e33c8);;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-gradient {
+    height: 2px;
+    background: linear-gradient(to right, #2b1df7, #4e33c8); /* Gradiente de roxo escuro para um tom mais claro */
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Muda o cursor para uma mão ao passar o mouse sobre a logo */
+}
+
+.logo-img {
+    width: 70px; /* Aumenta a largura da logo */
+    height: auto;
+    margin-right: 30px;
+    transition: transform 0.5s ease; /* Transição suave para a rotação */
+}
+
+.logo-img:hover {
+    transform: rotate(360deg); /* Rotação de 360 graus */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* Centraliza os links horizontalmente */
+    align-items: center;
+    gap: 100px;
+}
+
+
+.nav-links a {
+    color: #ffffff;
+    font-weight: 600; /* Ajuste o peso da fonte para 600 */
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+.nav-links a:hover {
+    color: #009c0d;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-right: 10px; /* Ajuste aqui para mover os botões mais para a esquerda */
+}
+
+.btn-register {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 600; /* Ajuste o peso da fonte para 600 */
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+.btn-register::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #009c0d;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.btn-register:hover::after {
+    width: 100%;
+}
+
+.btn-register:hover {
+    color: #ffffff;
+}
+
+.btn-login {
+    background-color: #2b1df7;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600; /* Ajuste o peso da fonte para 600 */
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+.btn-login:hover {
+    background-color: #009c0d;
+}
+
+/* Hero Section */
+.hero {
+    height: 400px; /* Reduzida para 400px para subir um pouco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f0f0f;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: none; /* Remove qualquer largura máxima */
+    width: 100%; /* O texto ocupará toda a largura disponível */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 0 120px; /* Adiciona um pequeno padding para não colar no canto */
+    margin: 0; /* Remove margens automáticas */
+    display: flex;
+    justify-content: space-between; /* Alinha o texto e o botão */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.hero-text {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+    margin-left: 10px; /* Ajuste aqui conforme necessário para posicionar mais à esquerda */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-left: 10px; /* Ajuste aqui para o parágrafo também */
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-left {
+    width: 40%;
+    padding-right: 20px;
+}
+
+.faq-title-hidden {
+    font-size: 2rem;
+    color: #a3a3a3; /* Cor clara para um efeito de "escondido" */
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+.faq-main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #0f0f0f; /* Cor preta */
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+.faq-right {
+    width: 50%;
+}
+
+.faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid #e0e0e0; /* Linha inferior para separar as perguntas */
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+.faq-question .arrow {
+    font-size: 1.5rem; /* Tamanho maior para o símbolo */
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 0 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+.faq-answer.show {
+    max-height: 300px; /* Ajuste a altura conforme necessário */
+    padding: 10px 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .faq-container {
+        flex-direction: column;
+    }
+
+    .faq-left, .faq-right {
+        width: 100%;
+    }
+
+    .faq-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #0e0e0e; /* Cor de fundo do rodapé */
+    color: #5e5e5e;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Garantindo que o corpo da página tenha altura suficiente */
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1; 
+    padding-bottom: 60px; /* Espaço para o rodapé ficar visível */
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+    font-weight: 600; /* Ajuste o peso da fonte para 600 */
+}
+
+.-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #2b1df7;
+    transition: color 0.3s ease;
+    font-weight: 600; /* Ajuste o peso da fonte para 600 */
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    justify-content: center;
+}
+
+.social-links li a {
+    color: #2b1df7; /* Cor dos ícones */
+    font-size: 20px; /* Tamanho dos ícones */
+    transition: color 0.3s;
+}
+
+.social-links li a:hover {
+    color: #ccc; /* Cor ao passar o mouse */
+}
+.social-links a:hover {
+    color: #fff;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+    font-weight: 600; /* Ajuste o peso da fonte para 600 */
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.faq-item {
+    margin-bottom: 20px; /* Espaço entre os itens */
+}
+
+
+.faq-question:hover {
+    background-color: #e0e0e0;
+}
+
+.faq-question .arrow {
+    color: #2b1df7; /* Cor roxinha para a setinha */
+    transition: transform 0.3s ease; /* Para animação de rotação */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* Centraliza os links */
+    gap: 70px; /* Aumente este valor para dar mais espaço */
+}
+
+/* Linha Verde */
+.navbar-gradient {
+    height: 2px;
+    background: linear-gradient(to right, #1f00ac, #4e33c8); 
+    width: 100%;
+}
+
+.accordion-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.accordion-section .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.accordion-section .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.accordion-section .tab.active {
+    background-color: #009c0d;
+    color: white;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: auto;
+}
+
+.accordion-item {
+    margin: 10px 0;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    position: relative;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-button:hover {
+    background-color: #e0e0e0;
+}
+
+.accordion-icon {
+    font-size: 1.2em;
+    color: #2b1df7;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: #fff;
+    padding: 0 15px;
+    text-align: left;
+    color: #333;
+}
+
+.accordion-content img {
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+.accordion-content ul {
+    padding: 0;
+    list-style: none;
+}
+
+.accordion-content li {
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9em;
+}
+
+.accordion-content li:before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #009c0d;
+}
+
+.checkout-button {
+    background-color: #2b1df7;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #0a008f;
+}
+
+.lightning-container {
+    display: inline-block;
+    position: relative;
+}
+
+.lightning-icon {
+    fill: #009c0d; /* Cor do raio */
+    transition: transform 0.1s ease;
+    filter: drop-shadow(0 0 5px #2b1df7);
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, -2px); }
+}
+
+.lightning-active .lightning-icon {
+    animation: flash 0.2s ease-in-out infinite alternate, shake 0.2s ease-in-out infinite alternate;
+}
+
+
+/* Seção Mid */
+.mid {
+    background-color: #fff;
+    padding: 40px 20px; /* Ajuste o padding conforme necessário */
+    text-align: center;
+    font-weight: bold;
+}
+
+.mid-content {
+    max-width: 800px; /* Ajuste a largura máxima conforme necessário */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.mid p {
+    font-weight: 600; /* Ajuste o peso da fonte para 600 */
+    line-height: 1.6; /* Ajuste a altura da linha conforme necessário */
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+}
+
+.mid::before {
+    content: '';
+    display: block;
+    width: 350px; /* Ajuste a largura da linha */
+    height: 1px; /* Ajuste a altura da linha */
+    background-color: #2b1df7; /* Cor da linha */
+    margin: 20px auto 10px; /* Margens para posicionar a linha */
+}
+
+/* Estilo para links do rodapé */
+footer ul li a {
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+    font-weight: 600; /* Ajuste o peso da fonte para 600 */
+    color: #5e5e5e; /* Cor dos links do rodapé */
+    transition: color 0.3s; /* Transição suave para a mudança de cor */
+}
+
+footer ul li a:hover {
+    color: #2b1df7; /* Cor dos links ao passar o mouse */
+}
+
+/* Seção Mirtillo */
+.mirtillo-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo para a direita */
+    align-items: flex-start; /* Alinha os itens verticalmente */
+    margin-top: 20px; /* Ajuste a margem superior */
+    margin-bottom: 40px; /* Ajuste a margem inferior */
+    margin-right: 70px;
+}
+
+.mirtillo-content {
+    width: 400px; /* Ajuste a largura da seção Mirtillo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mirtillo-title {
+    text-align: center;
+}
+
+.mirtillo-title h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mirtillo-title p {
+    color: #5e5e5e;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.mirtillo-icons {
+    display: flex;
+    gap: 100px; /* Aumentado para 30px para dar mais espaço */
+    margin-bottom: 20px;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+}
+
+.mirtillo-icons i {
+    font-size: 24px;
+    color: #2b1df7;
+}
+
+.mirtillo-form {
+    margin-bottom: 20px;
+}
+
+.mirtillo-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.mirtillo-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gradient-button {
+    background: linear-gradient(to right, #2b1df7, #4e33c8);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Utilize a fonte Poppins */
+    transition: background-color 0.3s, transform 0.1s ease, box-shadow 0.1s ease;
+    width: 100%; /* Define o botão para ocupar a largura do formulário */
+}
+
+.gradient-button:hover {
+    background: linear-gradient(to right, #4e33c8, #2b1df7); /* Inverte as cores do gradiente */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mirtillo-footer {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #5e5e5e;
+}
+
+/* Linha no footer */
+.footer-line {
+    border-top: 1px solid #5e5e5e; /* Ajuste a cor da linha */
+    margin: 10px 0;
+}
+
+/* Estilos para o botão "Cadastre-se agora" na seção Hero */
+.hero .gradient-button {
+  padding: 10px 20px; /* Ajuste o padding conforme necessário */
+  margin-left: 20px; /* Ajuste a margem esquerda conforme necessário */
+  border-radius: 5px;
+  font-weight: bold;
+  background: linear-gradient(to right, #1f00ac, #4e33c8); /* Gradiente roxo */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transição para todos os estilos */
+}
+
+.hero .gradient-button:hover {
+  background: linear-gradient(to right, #4e33c8, #1f00ac); /* Inverte as cores do gradiente */
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+.login-link {
+    color: #009c0d; /* Cor roxa */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #2b1df7;
+}
+
+/* Hero Container */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-container > section {
+    flex: 1;
+}
+
+/* Estilos para as palavras "completo" e "gratuitamente" */
+.completo, .gratuitamente {
+    color: #2b1df7; /* Cor roxa */
+    font-weight: bold;
+}
+
+.hero {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f0f0f;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Centralizar o Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ajustes para o "Comece na Mirtillo gratuitamente" */
+.mirtillo-title h3 {
+    display: inline-block; /* Permite que o h3 seja um bloco inline */
+}
+
+.gratuitamente {
+    display: inline-block;
+}
+
+/* Estilos para a lista da seção Content */
+.content-list {
+    background-color: #f9f9f9; /* Cor de fundo da lista */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+}
+
+.content-item {
+    color: #333; /* Cor do texto dos itens da lista */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.content-item:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o checkmark (ícone de marca de verificação) */
+.content-item i {
+    color: #009c0d; /* Cor do checkmark */
+    margin-right: 10px; /* Espaço entre o checkmark e o texto */
+}
+
+/* Estilos para os detalhes do conteúdo */
+.content-item-details {
+    background-color: #fff; /* Cor de fundo dos detalhes */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para os títulos dos detalhes */
+.content-item-details h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2b1df7; /* Cor do título */
+}
+
+/* Estilos para o texto dos detalhes */
+.content-item-details p {
+    color: #000000;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos para as imagens dos detalhes */
+.content-item-details img {
+    max-width: 100%;
+    height: auto;
+}

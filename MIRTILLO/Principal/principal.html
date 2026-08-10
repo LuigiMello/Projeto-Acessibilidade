@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirtillo | Líder em Infoprodutos no Brasil</title>
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" onclick="redirectToHome()">
+                <img src="C:\Users\529652\Downloads\mirtillo.png" alt="Descrição da Imagem" class="logo-img">
+            </div>            
+            <ul class="nav-links">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#faq">FAQ</a></li> 
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn-register">COMECE GRATUITAMENTE</button>
+                <button class="btn-login">ENTRAR</button>
+            </div>
+        </nav>
+        <div class="navbar-gradient"></div>  
+    </header>
+
+    <section class="hero-container">
+        <div class="hero-content">
+            <section class="hero">
+                <div class="hero-text">
+                    <h2>Objetivo, <br>
+                    <span class="completo">completo</span>, interativo! <br>
+                    Cresça no Mercado Digital!</h2>
+                    <p>Desenvolva e venda produtos digitais, como e-books, cursos online e mentorias,<br> usando a nossa plataforma. Transforme suas ideias em sucesso no marketing digital!</p>
+                </div>
+                <div></div>
+            </section>
+            <section class="mirtillo-section">
+                <div class="mirtillo-content">
+                    <div class="mirtillo-title">
+                        <h3>Comece na Mirtillo <span class="gratuitamente">gratuitamente</span></h3>
+                        <p>Cadastre-se com uma das contas abaixo</p>
+                    </div>
+                    <div class="mirtillo-icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-apple"></i>
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <form class="mirtillo-form">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" placeholder="Seu nome completo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Seu email principal!">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" placeholder="Insira uma senha">
+                        <button type="submit" class="gradient-button">Cadastre-se agora</button>
+                        <p>Já possui uma conta? <a href="#" class="login-link">Faça Login!</a></p>
+                    </form>
+                    <p class="mirtillo-footer">
+                        Suporte - Termos de Uso - Política de Privacidade
+                    </p>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="mid"> 
+        <div class="mid-content">
+            <p>Confira os benefícios exclusivos que a Mirtillo irá te proporcionar para <br> aumentar suas vendas e ter sucesso no digital.</p>
+        </div>
+    </section>
+ 
+
+ <!-- Seção de conteúdo estilo Hotmart -->
+<section class="accordion-section">
+    <h2>Venda relâmpago</h2>
+    <div class="lightning-container">
+        <svg class="lightning-icon" width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14H11L9 22L19 10H11L13 2Z" fill="#FFDD33"/>
+        </svg>
+    </div>
+    <br>
+    <div class="tabs">
+        <button class="tab active" onclick="showTabContent('tab1')">Para vender mais</button>
+        <button class="tab" onclick="showTabContent('tab2')">Para encantar seu cliente</button>
+        <button class="tab" onclick="showTabContent('tab3')">Para gerir seu negócio</button>
+    </div>
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-button" onclick="toggleAccordion(this)">
+                Converta mais vendas com nosso checkout inteligente <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <ul>
+                    <li>Maior taxa de aprovação no cartão de crédito para produtos digitais</li>
+                    <li>Checkout com carregamento ultra-rápido mais veloz do mercado</li>
+                    <li>Sólido: Tecnologia preparada para receber grandes lançamentos e milhões de acessos ao dia</li>
+                </ul>
+                <img src="caminho_para_a_imagem.png" alt="Imagem descritiva">
+            </div>
+        </div>
+        <!-- Outras opções no mesmo formato -->
+    </div>
+    <button class="checkout-button">Configurar meu checkout →</button>
+</section>
+
+
+    <section class="faq-section"> 
+        <div id="faq" class="faq-container">
+            <div class="faq-left">
+                <h2 class="faq-title-hidden">FAQ</h2>
+                <h2 class="faq-main-title">Tire suas dúvidas nas perguntas frequentes</h2>
+            </div>
+            <div class="faq-right">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Como faço para me cadastrar?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Você pode se cadastrar clicando no botão "Comece Gratuitamente" no topo da página.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Quantos produtos posso vender pela Mirtillo?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Você pode criar e vender quantos produtos digitais quiser!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Por que eu deveria vender na Mirtillo?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nossa plataforma é a mais completa do mercado! <br><br>A mais interativa e com o maior suporte possível para nossos produtores!
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Existe sistema de afiliados? Como Funciona?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Você pode cadastrar o seu produto em nosso marketplace ou enviar o link de convite para os afiliados!  <br><br>
+                            </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>A taxa é alta? </span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não! Nós da Mirtillo queremos favorecer nossos produtores e clientes! A taxa é uma das menores do mercado digital.  <br><br>
+                            </p>
+                    </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Qual é o horário de atendimento?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nosso horário de atendimento é de Segunda a Domingo, das 00:00h ás 00:00h! <br><br> SIM! Todos os dias, o dia inteiro! .</p>
+                    </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Como posso entrar em contato?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Você pode entrar em contato através da nossa página de contato ou pelas redes sociais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<footer id="footer">
+    <div class="footer-content">
+        <p>© 2024 – MIRTILLO LTDA.
+            <br>
+            <hr class="footer-line">
+            <br>
+             Todos os direitos reservados. CNPJ sob n: 00.000.000/0000-00</p>
+        <ul class="social-links">
+            <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+        <ul class="-links">
+        <li><a href="#">Licença de Uso</a></li>
+        <li><a href="#">Política de Conteúdo</a></li>
+        <li><a href="#">Política de Cookies</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Política de Segurança</a></li>
+        <li><a href="#">Política de Cancelamento</a></li>
+        <li><a href="#">Devoluções</a></li>
+        <li><a href="#">Denúncias</a></li>
+        <li><a href="#">Central de Ajuda</a></li>
+        </ul>
+    </div>
+</footer>
+
+    <script src="principal.js"></script>
+</body>
+</html>
